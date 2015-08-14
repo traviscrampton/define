@@ -21,10 +21,10 @@ describe(Word) do
     end
   end
 
-  describe('#word_bank') do
+  describe('#word_banks') do
     it('initially returns an empty array of definitions for the words') do
       test_word = Word.new("Salamander")
-      expect(test_word.word_bank()).to(eq([]))
+      expect(test_word.word_banks()).to(eq([]))
     end
   end
 
@@ -65,7 +65,7 @@ describe(Word) do
       test_word = Word.new('Concentrate')
       test_definition = Definition.new('To focus intensely')
       test_word.add_definition(test_definition)
-      expect(test_word.word_bank()).to(eq([test_definition]))
+      expect(test_word.word_banks()).to(eq([test_definition]))
     end
   end
 end

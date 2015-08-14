@@ -3,6 +3,7 @@ require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/definition')
 require('./lib/word')
+require('pry')
 
 get('/') do
   erb(:index)
@@ -25,9 +26,26 @@ post('/words') do
 end
 
 get('/definitions/:id') do
-  @vehicle = Definition.find(params.fetch('id').to_i())
-  @make = @vehicle.make()
-  @model = @vehicle.model()
-  @year = @vehicle.year()
+  @definition = Definition.find(params.fetch('id').to_i())
+  @define = @definition.define()
   erb(:definition)
+end
+
+get('/words/:id') do
+  @word = Word.find(params.fetch('id').to_i())
+  erb(:word)
+end
+
+get('/words/:id/vehicles/new') do
+  @word = Word.find(params.fetch('id').to_i())
+  erb(:word_definition_form)
+end
+
+post('/definitions') do
+  define = params.fetch('define')
+  @definition = Definition.new(define)
+  @definition.save()
+  @word = Word.find(params.fetch('word_id').to_i())
+  @word.add_definition(@definition)
+  erb(:success)
 end

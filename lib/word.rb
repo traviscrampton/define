@@ -4,7 +4,7 @@ class Word
   define_method(:initialize) do |name|
     @name = name
     @id = @@words.length().+(1)
-    @word_bank = []
+    @word_banks = []
   end
 
   define_method(:name) do
@@ -15,8 +15,8 @@ class Word
     @id
   end
 
-  define_method(:word_bank) do
-    @word_bank
+  define_method(:word_banks) do
+    @word_banks
   end
 
   define_singleton_method(:all) do
@@ -42,6 +42,6 @@ class Word
   end
 
   define_method(:add_definition) do |definition|
-    @word_bank.push(definition)
+    @word_banks.push(definition)
   end
 end
