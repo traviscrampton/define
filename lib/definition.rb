@@ -26,9 +26,9 @@ class Definition
     @@definitions = []
   end
 
-  define_method(:find) do |identification|
+  define_singleton_method(:find) do |identification|
     found_definition = nil
-    @@definitions.each do |definition|
+    @@definitions.each() do |definition|
       if definition.id().eql?(identification.to_i())
         found_definition = definition
       end
