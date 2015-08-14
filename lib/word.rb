@@ -1,7 +1,7 @@
 class Word
   @@words = []
 
-  define_method(:initialize) do
+  define_method(:initialize) do |name|
     @name = name
     @id = @@words.length().+(1)
     @word_bank = []
