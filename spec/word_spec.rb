@@ -60,12 +60,12 @@ describe(Word) do
     end
   end
 
-  # describe('#add_definition') do
-  #   it("adds a new vehicle to a dealership") do
-  #     test_word = Word.new('Concentrate')
-  #     test_definition = Definition.new('To focus intensely')
-  #     test_word.add_definition(test_definition)
-  #     expect(test_word.word_bank()).to(eq([test_definition]))
-  #   end
-  # end
+  describe('#add_definition') do
+    it("adds a new vehicle to a dealership") do
+      test_word = Word.new('Concentrate')
+      test_definition = Definition.new('To focus intensely')
+      test_word.add_definition(test_definition)
+      expect(test_word.word_bank()).to(eq([test_definition]))
+    end
+  end
 end
