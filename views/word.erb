@@ -2,9 +2,10 @@
 
 <ul>
   <% @word.word_banks().each() do |word_bank| %>
-  <li><a href="/definitions/<%= word_bank.id() %>"><%= word_bank.define() %></a></li>
+  <li><%= word_bank.define() %></li>
   <% end %>
 </ul>
 
 <a href="/words/<%= @word.id %>/definitions/new">Add a new definition</a>
 <a href="/">Return to Main Page</a>
+<a href="/words">Back to list of words</a>
