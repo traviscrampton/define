@@ -6,7 +6,7 @@
 
 ## Description
 
-# this application will first take a user input of what word they would like to add to a word bank, then the next step is for the user to select a word that they have created and to add a definition to that specific word. The user is able to add as many definitions as they would like to the word to account for synonyms
+##### this application will first take a user input of what word they would like to add to a word bank, then the next step is for the user to select a word that they have created and to add a definition to that specific word. The user is able to add as many definitions as they would like to the word to account for synonyms
 
 ## Technologies used
 # ruby sinatra rspec
@@ -33,3 +33,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+
+###### https://rocky-hamlet-2918.herokuapp.com/
