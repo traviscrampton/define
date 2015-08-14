@@ -14,7 +14,7 @@ get('/words/new') do
 end
 
 get('/words') do
-  @dealerships = Word.all()
+  @words = Word.all()
   erb(:words)
 end
 
